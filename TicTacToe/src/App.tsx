@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import React from 'react';
+import withAnimate from './HOCS/WithAnimate';
+import MainMenu from './Components/MainMenu';
+
+const test = withAnimate(() => <div className="text-4xl">test</div>, { delay: 1, initialOpacity: 0, whileInViewOpacity: 1 });
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <h4 className=" text-4xl">Hello</h4>
+    <div className="flex w-full h-full justify-center items-center bg-backgroundColor">
+      <MainMenu />
     </div>
   );
 }
