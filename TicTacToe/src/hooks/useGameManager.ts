@@ -6,6 +6,7 @@ const useGameManager = () => {
     gameStatus: 'INIT',
     gameBoard: Array(9).fill(null),
     isPlayingVsComputer: false,
+    currentSign: 'O',
     playerScores: {
       player1: 0,
       player2: 0,

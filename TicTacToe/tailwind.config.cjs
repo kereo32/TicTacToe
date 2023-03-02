@@ -8,6 +8,9 @@ module.exports = {
         borderColor: '#00a492',
         textColor: '#545454',
       },
+      backgroundImage: {
+        'tictactoe-background': "url('/src/assets/tictactoe.jpg')",
+      },
     },
   },
   plugins: [],
