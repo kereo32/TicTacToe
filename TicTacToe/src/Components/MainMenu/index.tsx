@@ -14,7 +14,7 @@ const MainMenu = (props: Props) => {
         <label className="text-textColor text-2xl w-[45%] font-mono">Play Vs AI</label>
         <button
           onClick={() => {
-            props.updateGameState({ gameStatus: 'PLAYING', isPlayingvsComputer: false });
+            props.updateGameState({ gameStatus: 'PLAYING', isPlayingVsComputer: false });
           }}
           className="border-2 w-[45%] border-borderColor shadow-lg mt-2 hover:bg-borderColor"
         >
@@ -25,7 +25,7 @@ const MainMenu = (props: Props) => {
         <label className="text-textColor text-2xl w-[45%] font-mono">Play Vs Player</label>
         <button
           onClick={() => {
-            props.updateGameState({ gameStatus: 'PLAYING', isPlayingvsComputer: true });
+            props.updateGameState({ gameStatus: 'PLAYING', isPlayingVsComputer: true });
           }}
           className="border-2 w-[45%] border-borderColor shadow-lg mt-2 hover:bg-borderColor"
         >

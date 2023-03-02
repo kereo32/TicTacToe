@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { GameState } from '../types/types';
 
 const useGameManager = () => {
-  const [gameState, setGameState] = useState<Object>({
+  const [gameState, setGameState] = useState<GameState>({
     gameStatus: 'INIT',
+    gameBoard: Array(9).fill(null),
     isPlayingVsComputer: false,
     playerScores: {
       player1: 0,

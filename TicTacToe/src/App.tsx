@@ -8,7 +8,7 @@ function App() {
   const { gameState, updateGameState } = useGameManager();
   return (
     <div className="flex w-full h-full justify-center items-center bg-backgroundColor">
-      {gameState.gameStatus == 'INIT' ? <MainMenu updateGameState={updateGameState} /> : <GameScreen />}
+      {gameState.gameStatus == 'INIT' ? <MainMenu updateGameState={updateGameState} /> : <GameScreen gameState={gameState} />}
     </div>
   );
 }
