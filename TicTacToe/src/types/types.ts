@@ -8,3 +8,8 @@ export type GameState = {
     player2: number;
   };
 };
+
+export type GameAction = {
+  gameState: GameState;
+  updateGameState: (gameState: any) => void;
+};

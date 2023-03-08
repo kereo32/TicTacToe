@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react';
-import withAnimate from '../../HOCS/WithAnimate';
-import { withGameScore } from '../../HOCS/WithGameScore';
-import { GameState } from '../../types/types';
+import { useEffect } from 'react';
+import { withAnimate, withGameScore } from '../../HOCS';
 import GameBoard from './GameBoard';
+import { GameAction } from '../../types/types';
 
-type Props = {
-  gameState: GameState;
-  updateGameState: (gameState: any) => void;
-};
-
-const GameScreen = (props: Props) => {
+const GameScreen = (props: GameAction) => {
   const { gameState, updateGameState } = props;
   useEffect(() => {
     updateGameState({ currentSign: gameState.currentSign == 'X' ? 'O' : 'X' });

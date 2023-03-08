@@ -1,6 +1,5 @@
 import React, { SyntheticEvent } from 'react';
 import withAnimate from '../../HOCS/WithAnimate';
-import useGameManager from '../../hooks/useGameManager';
 
 type Props = {
   updateGameState: (gameState: any) => void;
