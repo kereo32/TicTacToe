@@ -12,4 +12,5 @@ export type GameState = {
 export type GameAction = {
   gameState: GameState;
   updateGameState: (gameState: any) => void;
+  checkWinner: (gameBoard: Array<string>) => string | null;
 };

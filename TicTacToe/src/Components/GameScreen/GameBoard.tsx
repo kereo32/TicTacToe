@@ -11,8 +11,9 @@ const GameBoard: React.FC<BoardProps> = ({ board, update, currentSign }) => {
     return (
       <button
         className="bg-white border border-gray-400 p-4 w-20 h-20 text-3xl font-bold"
-        onClick={() => {
+        onClick={(e) => {
           update({ gameBoard: board.map((square, i) => (i == index ? currentSign : square)) });
+          e.currentTarget.disabled = true;
         }}
       >
         {board[index]}

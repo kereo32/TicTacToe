@@ -4,14 +4,15 @@ import GameBoard from './GameBoard';
 import { GameAction } from '../../types/types';
 
 const GameScreen = (props: GameAction) => {
-  const { gameState, updateGameState } = props;
+  const { gameState, updateGameState, checkWinner } = props;
   useEffect(() => {
     updateGameState({ currentSign: gameState.currentSign == 'X' ? 'O' : 'X' });
+    checkWinner(gameState.gameBoard);
   }, [gameState.gameBoard]);
 
   return (
     <div className="flex flex-col text-center w-[50%] h-[50%] border-2 shadow-lg border-borderColor">
-      <GameBoard currentSign={gameState.currentSign} board={gameState.gameBoard} update={updateGameState} />
+      <GameBoard gameState={gameState} currentSign={gameState.currentSign} board={gameState.gameBoard} update={updateGameState} />
     </div>
   );
 };
